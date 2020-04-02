@@ -36,7 +36,7 @@ class CreateNewProjectBase extends Component {
     let newProjectKey = this.props.firebase.doCreateNewKey("projects");
 
     this.props.firebase.createProject(newProjectKey).set({
-      name: this.state.projectName,
+      name: projectName,
       userUid: this.props.user.uid,
       userEmail: this.props.user.email
     });
